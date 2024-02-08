@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metode de a adauga CSS cu ajutorul JavaScript</title>
+    <style>  
+ 
+    
+    </style>
+
+</head>
+
+<body>
+    <div class="div-stanga">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quis numquam temporibus ipsum obcaecati error beatae ea, odio consequuntur laboriosam quia aliquam necessitatibus veritatis facilis perferendis, ducimus optio, corporis autem!</p>
+    <p>Illo dolore at eaque fugiat unde est, recusandae possimus? Fugit eaque unde commodi blanditiis labore deserunt! Delectus tempora distinctio, nostrum aspernatur consectetur atque! Amet aliquid nostrum similique molestias nemo facere?</p>
+    <p>Illo dolore at eaque fugiat unde est, recusandae possimus? Fugit eaque unde commodi blanditiis labore deserunt! Delectus tempora distinctio, nostrum aspernatur consectetur atque! Amet aliquid nostrum similique molestias nemo facere?</p>
+    <p>Illo dolore at eaque fugiat unde est, recusandae possimus? Fugit eaque unde commodi blanditiis labore deserunt! Delectus tempora distinctio, nostrum aspernatur consectetur atque! Amet aliquid nostrum similique molestias nemo facere?</p>
+    <p>Illo dolore at eaque fugiat unde est, recusandae possimus? Fugit eaque unde commodi blanditiis labore deserunt! Delectus tempora distinctio, nostrum aspernatur consectetur atque! Amet aliquid nostrum similique molestias nemo facere?</p>
+        <button id="btn1">Schimba CSS div stanga</button>
+</div>
+<div class="div-dreapta">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quis numquam temporibus ipsum obcaecati error beatae ea, odio consequuntur laboriosam quia aliquam necessitatibus veritatis facilis perferendis, ducimus optio, corporis autem!</p>
+    <p>Illo dolore at eaque fugiat unde est, recusandae possimus? Fugit eaque unde commodi blanditiis labore deserunt! Delectus tempora distinctio, nostrum aspernatur consectetur atque! Amet aliquid nostrum similique molestias nemo facere?</p>
+    <p>Illo dolore at eaque fugiat unde est, recusandae possimus? Fugit eaque unde commodi blanditiis labore deserunt! Delectus tempora distinctio, nostrum aspernatur consectetur atque! Amet aliquid nostrum similique molestias nemo facere?</p>
+    <p>Illo dolore at eaque fugiat unde est, recusandae possimus? Fugit eaque unde commodi blanditiis labore deserunt! Delectus tempora distinctio, nostrum aspernatur consectetur atque! Amet aliquid nostrum similique molestias nemo facere?</p>
+    <p>Illo dolore at eaque fugiat unde est, recusandae possimus? Fugit eaque unde commodi blanditiis labore deserunt! Delectus tempora distinctio, nostrum aspernatur consectetur atque! Amet aliquid nostrum similique molestias nemo facere?</p>
+
+    <button id="btn2">Schimba CSS div dreapta</button>
+
+</div>
+
+
+<button id="btn">Schimba CSS</button>
+<script>
+    let btn = document.getElementById('btn');
+    btn.addEventListener('click', function() {
+         let myParagraphs = document.querySelectorAll('body > p');
+        // let myParagraphs2 = document.getElementsByTagName(p);
+     alert(myParagraphs.length);
+    //   for(let i = 0; i <=myParagraphs.length; i++){
+    //     myParagraphs[i]. style.color = 'red';
+    //     myParagraphs[i].style.fontSize = '18px';
+    //   }
+    //     myParagraphs[0].style.color='red';
+    //  myParagraphs[0].style.fontSize = '18px';
+
+    myParagraphs.forEach(function(value){
+    value.style.color ='red';
+    value.style.fontSize ='18px';
+
+     })
+    })
+
+
+
+</script>
+
+
+</body>
+</html>
