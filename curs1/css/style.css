@@ -10,7 +10,7 @@ body{
     margin: 0 auto;
 }
 h1{
-    font: 36;
+    font: 36px;
     color: blue;
     border-bottom: 2px solid blueviolet;
     padding: 7px;

@@ -1,0 +1,58 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 10px;
+    padding: 15px;
+}
+
+body{
+    width: 100%;
+    max-width: 1000px;
+}
+body> div > div > div{
+background-color: aqua ;
+font-size: 20px;
+font-style:normal;
+margin: 15px auto;
+border:15px dotted rgb(43, 5, 159);
+padding: 20px 20px;
+color: black;
+}
+  div,.p-first{
+    color:rgb(35, 228, 61);
+    /* nu stiu cum sa fac ca acest prim paragraf don toate cele trei div-ri sa aiba culoare diferita, utilizand selectorii contextuali si elementele imbricate(alea cu plus sau ><, etc. */
+}
+body > div > div{
+    background-color: rgb(238, 112, 112);
+    font-size:small;
+    color: blue;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 15px  solid  green; 
+    padding: 20px 20px;
+    margin: 15px;
+  
+}
+body > div{
+    background-color: bisque;
+    font-size: 15px;
+    font-style: normal;
+    color: coral;
+    margin:  20px auto;
+    border: 10px solid rgb(234, 11, 11);
+}
+div p{
+text-align: center; 
+text-indent: 50px;
+/* color:chocolate  */
+} 
+div div div p{
+    color: blue;
+}
+/* div + p{
+    color: green;
+} */
+
+p+div{
+color: red;
+}
+  
