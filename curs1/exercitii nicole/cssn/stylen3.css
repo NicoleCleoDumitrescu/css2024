@@ -1,32 +1,32 @@
 a[title] {
   color: green;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 a[href="https://www.Link-academy.com"]
 {
-  color: #1f6053;
+  color: #0c9337;
   font-size: 25px;
+} 
+
+a[href *="#en/ro/"] {
+  color: rgb(106, 0, 255);
 }
 
-a[href*="#en/ro/"] {
-  color: blue;
-}
-
-a[href*="#fr/ro/"] {
+a[href *= "#fr/ro/"] {
   color: aqua;
 }
 
-a[href*="#it/ro/"] {
+a[href *="#it/ro/"] {
   color: red;
 }
 
-a[href^="https"] {
+a[href ^="https"] {
   text-transform: uppercase;
 }
 
-a[href$=".com"] {
-  text-decoration: none;
+a[href $=".com"] {
+  text-decoration:none;
   font-style: italic;
 }
 
@@ -35,7 +35,7 @@ a[data-info~="extern"] {
 }
 
 a[data-info~="intern"] {
-  border: 1px solid black;
+  border: 1px solid rgb(28, 160, 65);
 }
 
 p:empty {
