@@ -9,15 +9,15 @@ a[href="https://www.Link-academy.com"]
   font-size: 25px;
 } 
 
-a[href *="#en/ro/"] {
+a[href *="#en/ro"] {
   color: rgb(106, 0, 255);
 }
 
-a[href *= "#fr/ro/"] {
+a[href *= "#fr/ro"] {
   color: aqua;
 }
 
-a[href *="#it/ro/"] {
+a[href *="#it/ro"] {
   color: red;
 }
 

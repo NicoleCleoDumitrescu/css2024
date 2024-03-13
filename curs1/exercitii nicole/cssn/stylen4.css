@@ -1,0 +1,53 @@
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 20px;
+    border: 5px solid rgb(222, 96, 117);
+    text-align: center;
+    background-color: bisque;
+  }
+h1 {
+  border-bottom: 3px solid blue;
+  display: inline-block;
+}
+div {
+  margin: 15px auto;
+  padding: 15px;
+  text-align: center;
+  border
+} 
+
+input:focus {
+    padding: 20px;
+    border: 2px solid rgb(72, 0, 255); /* Corrected the border property */
+}
+input:disabled {
+  padding: 25px;
+}
+input:checked {
+  border: 5px solid green;
+  outline: 3px solid rgb(162, 108, 6);
+  width: 25px;
+}
+input[type="text"],
+input[type="email"],
+input[type="checkbox"],
+input[type="submit"] {
+  width: calc(100% -22px); /* Adjusting 
+  width to accommodate for padding and border */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #da8585;
+  border-radius: 5px;
+  text-align: right;
+} /* Aligning input content to the right */
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}

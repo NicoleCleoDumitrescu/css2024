@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Correlated Traffic Lights</title>
+<style>
+  .traffic-signal {
+    float: left;
+    margin-right: 20px;
+    text-align: center; /* Added to center the traffic signal elements */
+  }
+
+  .traffic-signal div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0.3;
+    margin-bottom: 10px;
+  }
+.
+  #traffic-signal1 {
+    padding: 5px; /* Removed margin-left */
+    margin-right: 50px;
+    display: inline-block;
+  }
+
+  #traffic-signal2 {
+    padding: 5px; /* Removed margin-right */
+    margin-left: 50px;
+    display: inline-block;
+  }
+/* 
+  #line1 {
+    height: 200px;
+    width: 10px;
+    background-color: #000;
+    margin-left: 30px;
+    float: left;
+  } */
+
+  .red {
+    background-color: red;
+  }
+
+  .yellow {
+    background-color: yellow;
+  }
+
+  .green {
+    background-color: green;
+  }
+</style>
+</head>
+<body onload="startTrafficSignals()">
+<div class="traffic-signal" id="traffic-signal1">
+  <div class="red"></div>
+  <div class="yellow"></div>
+  <div class="green"></div>
+</div>
+<div id="line1"></div> <!-- Moved the line element to separate the traffic signals -->
+
+<div class="traffic-signal" id="traffic-signal2">
+  <div class="red"></div>
+  <div class="yellow"></div>
+  <div class="green"></div>
+</div>
+
+<script>
+function startTrafficSignals() {
+  let trafficSignal1 = document.getElementById("traffic-signal1");
+  let trafficSignal2 = document.getElementById("traffic-signal2");
+
+  function switchToRed() {
+    trafficSignal1.querySelector(".red").style.opacity = 1;
+    trafficSignal1.querySelector(".yellow").style.opacity = 0.3;
+    trafficSignal1.querySelector(".green").style.opacity = 0.3;
+    trafficSignal2.querySelector(".red").style.opacity = 0.3;
+    trafficSignal2.querySelector(".yellow").style.opacity = 0.3;
+    trafficSignal2.querySelector(".green").style.opacity = 1;
+  }
+
+  function switchToYellow() {
+    trafficSignal1.querySelector(".red").style.opacity = 0.3;
+    trafficSignal1.querySelector(".yellow").style.opacity = 1;
+    trafficSignal1.querySelector(".green").style.opacity = 0.3;
+    trafficSignal2.querySelector(".red").style.opacity = 0.3;
+    trafficSignal2.querySelector(".yellow").style.opacity = 1;
+    trafficSignal2.querySelector(".green").style.opacity = 0.3;
+  }
+
+  function switchToGreen() {
+    trafficSignal1.querySelector(".red").style.opacity = 0.3;
+    trafficSignal1.querySelector(".yellow").style.opacity = 0.3;
+    trafficSignal1.querySelector(".green").style.opacity = 1;
+    trafficSignal2.querySelector(".red").style.opacity = 1;
+    trafficSignal2.querySelector(".yellow").style.opacity = 0.3;
+    trafficSignal2.querySelector(".green").style.opacity = 0.3;
+  }
+
+  // Initial state
+  switchToRed();
+
+  // State transitions
+  setInterval(function () {
+    switchToGreen();
+    setTimeout(function () {
+      switchToYellow();
+    }, 5000);
+    setTimeout(function () {
+      switchToRed();
+    }, 7000);
+  }, 12000);
+}
+</script>
+</body>
+</html>
